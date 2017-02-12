@@ -11,6 +11,6 @@ public:
     Semaphore(unsigned number);
     void wait();
     bool trywait();
-    int operator*() const;
+    int operator*();
     void post();
 };

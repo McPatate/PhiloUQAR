@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-SRC =		main
+SRC =		main	\
+		Semaphore
+
 SRC_DECO =	$(SRC:%=src/%.cpp)
 CXX = 		g++
 RM =		rm -f
@@ -26,7 +28,7 @@ NAME =		philosophes
 OBJ =		$(SRC_DECO:.cpp=.o)
 COMMON =       	-W -Wall -Wextra -Werror
 CXXFLAGS =     	$(COMMON) -Iinc -std=c++14
-LINKING =      	$(COMMON)
+LINKING =      	$(COMMON) -pthread
 
 all:		$(NAME)
 
