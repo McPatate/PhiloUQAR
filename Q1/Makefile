@@ -22,7 +22,7 @@ SRC =		main	\
 		Semaphore
 
 SRC_DECO =	$(SRC:%=src/%.cpp)
-CXX = 		g++
+CXX = 		clang++
 RM =		rm -f
 NAME =		philosophes
 OBJ =		$(SRC_DECO:.cpp=.o)

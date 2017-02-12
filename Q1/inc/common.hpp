@@ -22,4 +22,13 @@
 #pragma once
 
 #include <thread>
+#include <mutex>
+#include <iostream>
 #include <Semaphore.hh>
+
+struct constants
+{
+    static constexpr int n = 5;
+    static constexpr int left(int i) { return (i + n - 1) % n; }
+    static constexpr int right(int i) { return (i + 1) % n; }
+};

@@ -8,7 +8,7 @@ class Semaphore
     sem_t _handle;
 
 public:
-    Semaphore(unsigned number);
+    Semaphore(unsigned number = 0);
     void wait();
     bool trywait();
     int operator*();
