@@ -20,3 +20,6 @@
  * THE SOFTWARE.
  */
 #pragma once
+
+#include <thread>
+#include <Semaphore.hh>
