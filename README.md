@@ -1,5 +1,10 @@
 # Dîner des Philosophes
 
+## Auteurs
+
+Bastien Penavayre
+Luc Georges
+
 ## Compilation & création des exécutables
 
 Nous avons divisé les 4 éxigences en 4 sous-dossier noté Qn avec n allant de 1 à 4.
