@@ -1,0 +1,17 @@
+
+ Performance counter stats for './thread' (100 runs):
+
+          4,348154      task-clock (msec)         #    0,810 CPUs utilized            ( +-  3,08% )
+               100      context-switches          #    0,023 M/sec                    ( +-  0,06% )
+               100      cpu-migrations            #    0,023 M/sec                    ( +-  0,02% )
+               123      page-faults               #    0,028 M/sec                    ( +-  0,12% )
+         9 764 933      cycles                    #    2,246 GHz                      ( +-  0,79% )
+         6 391 143      stalled-cycles-frontend   #   65,45% frontend cycles idle     ( +-  1,19% )
+   <not supported>      stalled-cycles-backend   
+         7 738 378      instructions              #    0,79  insns per cycle        
+                                                  #    0,83  stalled cycles per insn  ( +-  0,17% )
+         1 478 706      branches                  #  340,077 M/sec                    ( +-  0,19% )
+            31 880      branch-misses             #    2,16% of all branches          ( +-  0,46% )
+
+       0,005370689 seconds time elapsed                                          ( +-  3,00% )
+

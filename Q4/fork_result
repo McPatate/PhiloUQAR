@@ -1,0 +1,17 @@
+
+ Performance counter stats for './fork' (100 runs):
+
+         51,993414      task-clock (msec)         #    0,897 CPUs utilized            ( +-  1,69% )
+               203      context-switches          #    0,004 M/sec                    ( +-  0,08% )
+               201      cpu-migrations            #    0,004 M/sec                    ( +-  0,06% )
+             8 491      page-faults               #    0,163 M/sec                    ( +-  0,11% )
+       127 566 172      cycles                    #    2,454 GHz                      ( +-  0,21% )
+        78 891 923      stalled-cycles-frontend   #   61,84% frontend cycles idle     ( +-  0,29% )
+   <not supported>      stalled-cycles-backend   
+       109 614 262      instructions              #    0,86  insns per cycle        
+                                                  #    0,72  stalled cycles per insn  ( +-  0,04% )
+        22 021 323      branches                  #  423,541 M/sec                    ( +-  0,04% )
+           818 520      branch-misses             #    3,72% of all branches          ( +-  1,00% )
+
+       0,057979855 seconds time elapsed                                          ( +-  1,67% )
+
