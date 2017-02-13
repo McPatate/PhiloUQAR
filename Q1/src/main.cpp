@@ -1,8 +1,6 @@
 #include <common.hpp>
 #include <unistd.h>
 
-static std::mutex printer;
-
 class Philosopher
 {
     enum e_states {
@@ -16,14 +14,6 @@ class Philosopher
     static std::mutex critical;
     
     int _id;
-
-    void say(std::string const &what) const { say(what, _id); }
-
-    void say(std::string const &what, int id) const
-    {
-        std::unique_lock<std::mutex> lock(printer);
-        std::cout << what << " " << id << std::endl;
-    }
 
 public:
     Philosopher(int id) : _id(id) {}
@@ -44,7 +34,6 @@ public:
         {
             std::unique_lock<std::mutex> lock(critical);
             states[_id] = hungry;
-            say("Hungry");
             test();
         }
         s[_id].wait();
@@ -64,7 +53,6 @@ public:
     {
         std::unique_lock<std::mutex> lock(critical);
         states[_id] = thinking;
-        say("Think");
         test(constants::left(_id));
         test(constants::right(_id));
     }
@@ -76,7 +64,6 @@ public:
         if (states[id] == hungry && states[constants::left(id)] != eating &&
             states[constants::right(id)] != eating) {
             states[id] = eating;
-            say("Eating", id);
             s[id].post();
         }
     }
@@ -94,5 +81,5 @@ int main()
         tmp[i] = std::thread(Philosopher(i));
     for (int i = 0; i < 5; i++)
         tmp[i].join();
-    
+    return 0;
 }

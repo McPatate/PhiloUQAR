@@ -14,6 +14,7 @@ int main()
         tmp[i] = std::thread(Philosopher(i));
     while (true)
         std::thread(thread_popup).join();
+    return 0;
 }
 
 Philosopher::e_states Philosopher::states[constants::n];
